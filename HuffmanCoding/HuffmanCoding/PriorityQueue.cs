@@ -22,14 +22,14 @@ namespace HuffmanCoding
         }
 
         // Add an item to the queue.
-        public void Enqueue(T new_value, int new_priority)
+        public void Add(T new_value, int new_priority)
         {
             Values.Add(new_value);
             Priorities.Add(new_priority);
         }
 
         // Remove the item with the largest priority from the queue.
-        public void Dequeue(out T top_value, out int top_priority)
+        public void Poll(out T top_value, out int top_priority)
         {
             // Find the hightest priority.
             int best_index = 0;

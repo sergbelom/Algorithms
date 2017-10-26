@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
 namespace HuffmanCoding
 {
+    // приоритетная очередь, за основу взята очередь из книги Рода Стивенсона Алгоритмы
+
     class PriorityQueue<T>
     {
         // The items and priorities.
@@ -36,7 +38,7 @@ namespace HuffmanCoding
             int best_priority = Priorities[0];
             for (int i = 1; i < Priorities.Count; i++)
             {
-                if (best_priority < Priorities[i])
+                if (best_priority > Priorities[i])
                 {
                     best_priority = Priorities[i];
                     best_index = i;

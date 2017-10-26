@@ -5,69 +5,43 @@ using System.Collections.Generic;
 
 namespace HuffmanCoding
 {
+
     class HuffmanCode
-    {
-        class Node : IComparable<Node>
+    {       
+        // считывание происходит с файла text.txt, который лежит в исходниках
+        public static string ReadFile()
         {
-            readonly public int sum; // суммарная частота встречающихся символов в каждом поддереве
+            string inputStr;
 
-            public Node(int sum)
-            {
-                this.sum = sum;
-            }               
-            public int CompareTo(Node other)
-            {
-                return sum.CompareTo(other.sum);
-            }
-        }
-
-        // внутренний узел с двумя потомками: левый и правый
-        class InternalNode : Node
-        {
-            Node left; Node right;
-
-            public InternalNode(Node left, Node right) : base(left.sum + right.sum)
-            {
-                this.left = left;
-                this.right = right;
-                // sum = ;
-            }
-        }
-
-        // узлы - листья (лист отвечает определенному символу
-        class LeafNode : Node
-        {
-            char symbol;
-            
-            public LeafNode( char symbol , int count ) : base(count)  {
-                this.symbol = symbol;
-                //this.sum = count;
-            }
-        }
-
-        public static void Run()
-        {
-            string sLine = "";
             StreamReader objReader;
             try
             {
-                objReader = new StreamReader("test.txt");
+                objReader = new StreamReader("text.txt");
             }
             catch ( FileNotFoundException )
             {
-                 throw new FileNotFoundException( string.Format("File not found!"));
+                throw new FileNotFoundException( string.Format("File not found!"));
             }
-          
-            sLine = objReader.ReadLine();
-            Console.WriteLine(sLine);
+            
+            inputStr = objReader.ReadLine();
+            objReader.Close();
+            return inputStr;
+        }
+        
+        // запуск процесса получения оптимального кода (сам алгоритм)
+        public static void Run()
+        {
+            string sLine = "";
+            
+            sLine = Console.ReadLine();
 
+            // словарь для (символ,частота)
             Dictionary<char, int> count = new Dictionary<char, int>();
 
             // анализируем считанную строку и считаем количество симовлов в строчке
             for (int i = 0; i < sLine.Length; i++)
             {
                 char c = sLine[i];
-                Console.WriteLine(c);
 
                 if (count.ContainsKey(c))
                 {
@@ -82,44 +56,82 @@ namespace HuffmanCoding
             char[] keyVal = new char[count.Count];
 
             count.Keys.CopyTo(keyVal, 0);
-
-            for (int j = 0; j < count.Values.Count; j++)
-            {
-                Console.WriteLine("{0} : {1}", keyVal[j], count[keyVal[j]]);
-            }
-            objReader.Close();
+            
+            // словарь для (символ,узел)
+            Dictionary<char, Node> charNodes = new Dictionary<char, Node>();
 
             PriorityQueue<Node> priorityQueue = new PriorityQueue<Node>();
 
             // добавим в приоритетную очередь элементы по одному как они встречаются у нас в списке
-
             foreach (KeyValuePair<char, int> kvp in count)
             {
                 //Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
 
                 LeafNode currentChar = new LeafNode(kvp.Key, kvp.Value);
+                charNodes.Add(kvp.Key, currentChar);
 
                 priorityQueue.Add(currentChar, kvp.Value);
             }
-                int sum = 0;
-                while (priorityQueue.NumItems > 1 )
-                {
-                    Node first; int firstPriority;
-                    priorityQueue.Poll( out first , out firstPriority );
 
-                    Node second; int secondPriority;
-                    priorityQueue.Poll( out second , out secondPriority);
+            int sum = 0;
+            InternalNode node;
+            while (priorityQueue.NumItems > 1 )
+            {
+                 Node first; int firstPriority;
+                 priorityQueue.Poll( out first , out firstPriority );
 
-                    InternalNode node = new InternalNode(first, second);
-                    sum += node.sum;
-                    priorityQueue.Add( node , first.sum + second.sum );
-                }
-                Console.WriteLine(sum);
+                 Node second; int secondPriority;
+                 priorityQueue.Poll( out second , out secondPriority);
 
+                 node = new InternalNode(first, second);
+                    
+                 sum += node.sum;
 
+                 priorityQueue.Add(node, first.sum + second.sum);
+            }
+            // для случае с одним элементом
+            if ( count.Count == 1 )
+            {
+                sum = sLine.Length;
+            }
 
+            Console.WriteLine(count.Count + " " + sum);
+
+            // создаем корень как последний оставшийся элемент очереди
+            Node root;
+            int rootPrior;
+
+            priorityQueue.Poll(out root , out rootPrior);
+
+            // для случае с одним элементом
+            if (count.Count == 1)
+            {
+                root.code = "0";
+                root.BuildCode("0");
+            }
+            else
+            {
+                root.BuildCode("");
+            }
             
+            // строка с результатом кодирования
+            string resultEncoding = "";
+            for ( int i = 0; i < sLine.Length; i++ )
+            {
+                char c = sLine[i];
+                resultEncoding += charNodes[c].code;
+            }
 
+            Console.WriteLine(resultEncoding);
+                      
         }
     }
 }
+
+
+
+// можно использовать для вывода частоты появления символов
+//for (int j = 0; j < count.Values.Count; j++)
+//{
+//Console.WriteLine("{0} : {1}", keyVal[j], count[keyVal[j]]);
+//}

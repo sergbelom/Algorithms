@@ -10,12 +10,11 @@ namespace HuffmanCoding
     {
         static void Main(string[] args)
         {
-            HuffmanCode algo = new HuffmanCode();
-            // считывание 
+
             HuffmanCode.Run();
 
-            // программа закончит свою работу после нажатия на любую клавишу
-            Console.ReadKey();
+             Console.ReadKey();
         }
     }
 }
+

@@ -1,3 +1,6 @@
 # Algorithms
-Репозиторий для изучения алгоритмов
-1. Добавлен код для получения оптимального кода Хаффмана
+Repository for algorihms
+1. Huffman Coding
+2. Huffman Decoding
+
+

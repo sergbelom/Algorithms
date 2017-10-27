@@ -10,12 +10,15 @@ namespace HuffmanDeconing
     {
         static void Main(string[] args)
         {
+            AlgoHuffmanDecoding HuffmanDecode = new AlgoHuffmanDecoding();
 
-            string[] inputData = new string[AlgoHuffmanDecoding.ReadLineFromFile().Length];
-            inputData = AlgoHuffmanDecoding.ReadLineFromFile();
+            int countTest = HuffmanDecode.IntInputData[0];
 
-            Console.WriteLine(inputData[3]);
+            Dictionary<string, char> dictCharCodeHuffman = HuffmanDecode.DictionaryHaffmanCode;
 
+            string initCodeString = HuffmanDecode.InputCodeHuffmanString;
+
+            Console.WriteLine(HuffmanDecode.ParseHuffmanString());
 
             Console.ReadKey();
         }

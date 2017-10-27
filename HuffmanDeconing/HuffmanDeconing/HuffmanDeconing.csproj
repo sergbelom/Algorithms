@@ -46,6 +46,7 @@
     <Compile Include="AlgoHuffmanDecoding.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadFromFileOrConsole.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

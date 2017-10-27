@@ -1,67 +1,67 @@
 ﻿using System;
-using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace HuffmanDeconing
 {
-    class AlgoHuffmanDecoding
+    public class AlgoHuffmanDecoding
     {
-        // статический метод для построчного считывания текстового файла со входной информацией
-        public static string[] ReadLineFromFile()
+        // ПОЛЯ
+        // поле для строкового входного массива
+        private string[] InputArrString;
+        // поле для информации о количестве и длине закодированной строки
+        private int[] InputData;
+        // поле для хранения информации о символах и частотах, которые им соответсвуют
+        private Dictionary<string, char> CharHaffmanCode;
+        // поле для последней строки начального датасета - закодированной кодом Хаффмена
+        private string InputCodeString; 
+
+        // СВОЙСТВА
+        public Dictionary<string, char> DictionaryHaffmanCode
         {
-            StreamReader objReader;
-            
-            try
-            {
-                objReader = new StreamReader("text.txt");
-            }
-            catch (FileNotFoundException)
-            {
-                throw new FileNotFoundException(string.Format("File not found!"));
-            }
-
-            // считываем первую строку
-            string[] firstInputData = objReader.ReadLine().Split(' ');
-            
-            int countChar = int.Parse(firstInputData[0]); // число символов
-            int lengthStr = int.Parse(firstInputData[1]); // длина закодированного сообщения
-
-            string[] inputStr = new string[countChar+1];
-
-            for ( int i = 0; i <= countChar ; i++ )
-            {
-                inputStr[i] = objReader.ReadLine();
-            }
-            
-            objReader.Close();
-
-            //Console.WriteLine(inputStr[countChar]);
-
-            return inputStr;
+            get { return CharHaffmanCode; }
         }
-
-        // статический метод для построчного считывания входных данных с комндной строки
-        public static string[] ReadLineFromConsole()
+        public int[] IntInputData
         {
-            string[] firstInputData = Console.ReadLine().Split(' ');
-
-            int countChar = int.Parse(firstInputData[0]); // число символов
-            int lengthStr = int.Parse(firstInputData[1]); // длина закодированного сообщения
-
-            string[] inputDataFromConsole = new string[countChar+1];
-
-            for (int i = 0; i <= countChar; i++)
+            get { return InputData; }
+        }
+        public string InputCodeHuffmanString
+        {
+            get { return InputCodeString; }
+        }
+        public AlgoHuffmanDecoding()
+        {
+            InputArrString = ReadFromFileOrConsole.ReadLineFromFile();
+            InputData = ReadFromFileOrConsole.InitNumber(InputArrString[0]);
+            CharHaffmanCode = ReadFromFileOrConsole.CharHaffmanCode(InputArrString);
+            InputCodeString = InputArrString[ReadFromFileOrConsole.InitNumber(InputArrString[0])[0] + 1];
+        }
+        
+        // парсим закодированную строку
+        // TODO: не возвращает последний d
+        public string ParseHuffmanString()
+        {
+            string interSTR = "";
+            string resultSTR = "";
+            char keyChar = ' ';
+            // построчно считываем 
+            for (int i = 0; i < InputCodeString.Length; i++)
             {
-                inputDataFromConsole[i] = Console.ReadLine();
+                //Console.WriteLine(huffmanCode[i]);
+                interSTR += InputCodeString[i];
+
+                if (InputCodeString[i] == '0')
+                {
+                    CharHaffmanCode.TryGetValue(interSTR, out keyChar);
+                    resultSTR += keyChar;
+                    interSTR = "";
+                    continue;
+                }
             }
 
-            //Console.WriteLine(inputDataFromConsole[countChar]);
-
-
-            return inputDataFromConsole;
+            return resultSTR;
         }
-
     }
 }

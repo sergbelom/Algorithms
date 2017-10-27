@@ -33,10 +33,10 @@ namespace HuffmanCoding
         public static void Run()
         {
 
-            ReadFile();
+            //ReadFile();
 
+            // считывание с консоли
             string sLine = "";
-            
             sLine = Console.ReadLine();
 
             // словарь для (символ,частота)

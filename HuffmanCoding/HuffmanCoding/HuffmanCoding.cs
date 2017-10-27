@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
@@ -114,15 +115,18 @@ namespace HuffmanCoding
                 root.BuildCode("");
             }
             
-            // строка с результатом кодирования
-            string resultEncoding = "";
+            // строка с результатом кодирования (собираем все символы в одну сроку)
+            //string resultEncoding = "";
+
+            //добавлено использование класса StringBuilder
+            StringBuilder strBuilder = new StringBuilder();
             for ( int i = 0; i < sLine.Length; i++ )
             {
                 char c = sLine[i];
-                resultEncoding += charNodes[c].code;
+                strBuilder.Append(charNodes[c].code);
             }
 
-            Console.WriteLine(resultEncoding);
+            Console.WriteLine(strBuilder.ToString());
                       
         }
     }

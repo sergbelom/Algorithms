@@ -10,11 +10,12 @@ namespace HuffmanDeconing
     {
         static void Main(string[] args)
         {
-            //string sLine = Console.ReadLine();
 
-            AlgoHuffmanDecoding.ReadLineFromFile();
+            string[] inputData = new string[AlgoHuffmanDecoding.ReadLineFromFile().Length];
+            inputData = AlgoHuffmanDecoding.ReadLineFromFile();
 
-            AlgoHuffmanDecoding.ReadLineFromConsole();
+            Console.WriteLine(inputData[3]);
+
 
             Console.ReadKey();
         }

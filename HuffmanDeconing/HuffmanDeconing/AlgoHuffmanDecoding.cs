@@ -37,7 +37,7 @@ namespace HuffmanDeconing
             
             objReader.Close();
 
-            Console.WriteLine(inputStr[countChar]);
+            //Console.WriteLine(inputStr[countChar]);
 
             return inputStr;
         }
@@ -57,7 +57,7 @@ namespace HuffmanDeconing
                 inputDataFromConsole[i] = Console.ReadLine();
             }
 
-            Console.WriteLine(inputDataFromConsole[countChar]);
+            //Console.WriteLine(inputDataFromConsole[countChar]);
 
 
             return inputDataFromConsole;

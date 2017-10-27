@@ -8,11 +8,10 @@ namespace HuffmanCoding
 {
 
     class HuffmanCode
-    {       
+    {
         // считывание происходит с файла text.txt, который лежит в исходниках
         public static string ReadFile()
         {
-            string inputStr;
 
             StreamReader objReader;
             try
@@ -23,15 +22,19 @@ namespace HuffmanCoding
             {
                 throw new FileNotFoundException( string.Format("File not found!"));
             }
-            
-            inputStr = objReader.ReadLine();
+
+            string inputStr = objReader.ReadLine();
             objReader.Close();
+
             return inputStr;
         }
         
         // запуск процесса получения оптимального кода (сам алгоритм)
         public static void Run()
         {
+
+            ReadFile();
+
             string sLine = "";
             
             sLine = Console.ReadLine();
@@ -131,8 +134,6 @@ namespace HuffmanCoding
         }
     }
 }
-
-
 
 // можно использовать для вывода частоты появления символов
 //for (int j = 0; j < count.Values.Count; j++)

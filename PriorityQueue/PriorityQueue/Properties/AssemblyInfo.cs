@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("HuffmanDeconing")]
+[assembly: AssemblyTitle("PriorityQueue")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HuffmanDeconing")]
+[assembly: AssemblyProduct("PriorityQueue")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("c19fc0fc-4350-4968-915f-5bea9f0acc7c")]
+[assembly: Guid("dbf8587a-a9ef-407b-8565-433d69e71f90")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

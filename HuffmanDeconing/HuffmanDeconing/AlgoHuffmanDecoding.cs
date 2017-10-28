@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace HuffmanDeconing
 {
@@ -16,7 +16,7 @@ namespace HuffmanDeconing
         // поле для хранения информации о символах и частотах, которые им соответсвуют
         private Dictionary<string, char> CharHaffmanCode;
         // поле для последней строки начального датасета - закодированной кодом Хаффмена
-        private string InputCodeString; 
+        private string InputCodeString;
 
         // СВОЙСТВА
         public Dictionary<string, char> DictionaryHaffmanCode
@@ -33,29 +33,31 @@ namespace HuffmanDeconing
         }
         public AlgoHuffmanDecoding()
         {
-            InputArrString = ReadFromFileOrConsole.ReadLineFromFile();
+            InputArrString = ReadFromFileOrConsole.ReadLineFromFile(); //можно изменить на считывание с консоли
             InputData = ReadFromFileOrConsole.InitNumber(InputArrString[0]);
             CharHaffmanCode = ReadFromFileOrConsole.CharHaffmanCode(InputArrString);
             InputCodeString = InputArrString[ReadFromFileOrConsole.InitNumber(InputArrString[0])[0] + 1];
         }
         
         // парсим закодированную строку
-        // TODO: не возвращает последний d
+        // TODO: не возвращает последний d (косяк с выводом символов, не имеющих 0, например, 111)
         public string ParseHuffmanString()
         {
             string interSTR = "";
             string resultSTR = "";
             char keyChar = ' ';
-            // построчно считываем 
+            // посимвольно считываем 
             for (int i = 0; i < InputCodeString.Length; i++)
             {
-                //Console.WriteLine(huffmanCode[i]);
+                // считываем один следующий символ из закодированной строки
                 interSTR += InputCodeString[i];
-
-                if (InputCodeString[i] == '0')
+                // попытаемся найти interSTR в словаре "код-символ"
+                CharHaffmanCode.TryGetValue(interSTR, out keyChar);
+                if (CharHaffmanCode.ContainsKey(interSTR))
                 {
-                    CharHaffmanCode.TryGetValue(interSTR, out keyChar);
+                    //Console.WriteLine(interSTR + "   " + keyChar);
                     resultSTR += keyChar;
+                    keyChar = ' ';
                     interSTR = "";
                     continue;
                 }

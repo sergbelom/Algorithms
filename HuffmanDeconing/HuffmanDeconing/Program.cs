@@ -10,14 +10,13 @@ namespace HuffmanDeconing
     {
         static void Main(string[] args)
         {
+            //создаем экземпляр алгоритма
             AlgoHuffmanDecoding HuffmanDecode = new AlgoHuffmanDecoding();
 
-            int countTest = HuffmanDecode.IntInputData[0];
-
+            //получаем словарь (код-символ) из исходного датасета
             Dictionary<string, char> dictCharCodeHuffman = HuffmanDecode.DictionaryHaffmanCode;
 
-            string initCodeString = HuffmanDecode.InputCodeHuffmanString;
-
+            //выводим результат декодирования (результат принят системой Stepik)
             Console.WriteLine(HuffmanDecode.ParseHuffmanString());
 
             Console.ReadKey();

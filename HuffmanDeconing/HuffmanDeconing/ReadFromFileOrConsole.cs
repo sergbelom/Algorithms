@@ -69,36 +69,24 @@ namespace HuffmanDeconing
             return dictCharCode;
         }
 
-        // статический метод для получения последней строк начального датасета - закодированной кодом Хаффмана
-        /*public static string StrHaffmanCode(string arrInputLastString )
-        {
-
-            return 
-        }*/
-
         // статический метод для построчного считывания входных данных с консоли
         public static string[] ReadLineFromConsole()
         {
-            string[] firstInputData = Console.ReadLine().Split(' ');
+            string firstInputData = Console.ReadLine();
 
-            int countChar = int.Parse(firstInputData[0]); // число символов
-            int lengthStr = int.Parse(firstInputData[1]); // длина закодированного сообщения
+            int countChar = int.Parse(firstInputData.Split(' ')[0]) + 2; // число символов
+            int lengthStr = int.Parse(firstInputData.Split(' ')[1]); // длина закодированного сообщения
 
-            string[] inputDataFromConsole = new string[countChar + 1];
+            string[] inputDataFromConsole = new string[countChar];
+            inputDataFromConsole[0] = firstInputData;
 
-            for (int i = 0; i <= countChar; i++)
+            for (int i = 1; i < countChar; i++)
             {
                 inputDataFromConsole[i] = Console.ReadLine();
             }
             
             return inputDataFromConsole;
         }
-
-        /* TODO: сделать набор статических методов для:
-        получения int[] с числом символов и длиной закодированной строки
-        получения Dictionary<char,strign> с символом и кодом
-        получения string с закодированной строкой
-        */
 
     }
 

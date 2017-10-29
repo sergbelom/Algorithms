@@ -1,11 +1,8 @@
 # Algorithms
-Repository for this course https://stepik.org/course/217/syllabus about algorihms
+Repository for this course [Algorithms](https://stepik.org/course/217/syllabus);
 
+[Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number);
 
-1. [Huffman Coding](https://en.wikipedia.org/wiki/Huffman_coding);
+[Huffman Coding and Huffman Decoding](https://en.wikipedia.org/wiki/Huffman_coding);
 
-2. Huffman Decoding
-
-3. Priority Queue
-
-
+[Priority Queue](https://en.wikipedia.org/wiki/Priority_queue);

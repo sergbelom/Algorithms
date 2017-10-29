@@ -29,11 +29,11 @@ namespace PriorityQueue
                 if (lineFromConsole[0] != "ExtractMax")
                 {
                     interValue = int.Parse(lineFromConsole[1]);
-                    inputQueue.Add(int.Parse(lineFromConsole[1]), interValue);
+                    inputQueue.Add(interValue, interValue);
                 }
                 else
                 {
-                    inputQueue.Poll(out resultInterValue, out interValue);
+                    inputQueue.Poll(out resultInterValue, out resultInterValue);
                     result.Add(resultInterValue);
                 }
             }
@@ -42,9 +42,6 @@ namespace PriorityQueue
             {
                 Console.WriteLine(elem);
             }
-
-            Console.ReadKey();
-
         }
     }
 }

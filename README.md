@@ -1,5 +1,5 @@
 # Algorithms
-Repository for this course [Algorithms](https://stepik.org/course/217/syllabus).
+Repository for this course [Algorithms](https://stepik.org/course/217/syllabus) and other.
 
 [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
 

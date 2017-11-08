@@ -11,3 +11,5 @@ References in wikipedia about algorithms.
 [Priority Queue](https://en.wikipedia.org/wiki/Priority_queue)
 
 [Ant Algorithm](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms)
+
+[Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)

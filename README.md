@@ -4,7 +4,7 @@ Each the algorithm is located in selected brach.
 
 References in wikipedia about algorithms.
 
-+ [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
+[+] [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
 
 + [Huffman Coding and Huffman Decoding](https://en.wikipedia.org/wiki/Huffman_coding)
 

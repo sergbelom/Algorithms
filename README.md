@@ -2,7 +2,7 @@
 Repository for this course [Algorithms](https://stepik.org/course/217/syllabus) and other.
 Each the algorithm is located in selected brach.
 
-References in wikipedia about algorithms.
+References to wikipedia about algorithms.
 
 |+| [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
 

@@ -17,3 +17,8 @@ References to wikipedia about algorithms.
 |+| [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
 |-| [Karatsuba Algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
+
+
+
+
+|-| [K-means clustering](https://en.wikipedia.org/wiki/K-means_clustering)

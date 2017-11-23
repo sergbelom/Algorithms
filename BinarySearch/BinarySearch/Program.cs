@@ -22,7 +22,6 @@ namespace BinarySearch
                 inputArr[i] = Convert.ToInt32(inputLenArr[i + 1]);
             }
             return inputArr;
-
         }
 
         // метод для бинарного поиска

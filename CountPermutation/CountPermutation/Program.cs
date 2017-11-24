@@ -8,6 +8,9 @@ namespace CountPermutation
 {
     class Program
     {
+        // поле хранит количество инверсий
+        static long countPermutation = 0;
+
         // считываем входной массив
         static int[] readArray()
         {
@@ -22,26 +25,54 @@ namespace CountPermutation
             }
             return inputArr;
         }
-        
-        // функция сравнения
-        static int compareElement()
-        {
-            return 0;
-        }
-        
-        static void Main(string[] args)
-        {
-            // работаем со считанным массивом
-            int[] workArr = readArray();
-            int result = 0;
 
-            /*
-            для i от 2 до n:
-            j ← i
-            пока j > 1 и A[j] < A[j − 1]:
-            обменять A[j] и A[j − 1]
-            j ← j − 1
-            */
+        // сортировка слиянием
+        static int[] Merge_Sort(int[] massive)
+        {
+            if (massive.Length == 1)
+                return massive;
+
+            int mid_point = massive.Length / 2;
+            return Merge(Merge_Sort(massive.Take(mid_point).ToArray()), Merge_Sort(massive.Skip(mid_point).ToArray()));
+        }
+        static int[] Merge(int[] mass1, int[] mass2)
+        {
+            int a = 0, b = 0;
+            int[] merged = new int[mass1.Length + mass2.Length];
+
+            for (int i = 0; i < mass1.Length + mass2.Length; i++)
+            {
+                if (b < mass2.Length && a < mass1.Length)
+                {
+                    if (mass1[a] > mass2[b])
+                    {
+                        merged[i] = mass2[b++];
+                        countPermutation += mass1.Length-a;
+                    }
+                    else
+                    {
+                        merged[i] = mass1[a++];
+                    }
+
+                }
+                else
+                {
+                    if (b < mass2.Length)
+                    {
+                        merged[i] = mass2[b++];
+                    }
+                    else
+                    {
+                        merged[i] = mass1[a++];
+                    }
+                }
+            }
+            return merged;
+        }
+
+        // сортировка вставками
+        static int[] Paste_Sort( int[] workArr )
+        {                     
             int resLen = workArr.Length;
             int j;
             int inter;
@@ -55,13 +86,22 @@ namespace CountPermutation
                     workArr[j] = workArr[j - 1];
                     workArr[j - 1] = inter;
                     j = j - 1;
-                    result++;
+                    countPermutation++;
                 }
             }
+            return workArr;            
+        }
 
-            Console.WriteLine(result);
+        static void Main(string[] args)
+        {
+            //в теле методов просиходит редактирование поля класса countPermutation, для подсчета количества инверсий
+
+            Merge_Sort(readArray());
+
+            //Paste_Sort(readArray());
+
+            Console.WriteLine(countPermutation);
             Console.ReadKey();
-
         }
     }
 }

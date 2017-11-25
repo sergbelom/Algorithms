@@ -18,7 +18,8 @@ References to wikipedia about algorithms.
 
 |-| [Karatsuba Algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
 
-
-
+|+| [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) and [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
 
 |-| [K-means clustering](https://en.wikipedia.org/wiki/K-means_clustering)
+
+

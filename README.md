@@ -20,6 +20,8 @@ References to wikipedia about algorithms.
 
 |+| [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) and [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
 
+|-| [Quick Sort](https://en.wikipedia.org/wiki/Quicksort)
+
 |-| [K-means clustering](https://en.wikipedia.org/wiki/K-means_clustering)
 
 

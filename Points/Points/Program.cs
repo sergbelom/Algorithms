@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -40,43 +41,71 @@ namespace Points
         {
             int[,] segmentsX_L_R = new int[countsSegmentsAndPoints[0],2];
             int[] inter = new int[2];
+            string[] str = new string[2];
             for ( int i =0 ; i < countsSegmentsAndPoints[0] ; i++ )
             {
-                inter = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
-                segmentsX_L_R[i,0] = inter[0]; // левая координата 
-                segmentsX_L_R[i,1] = inter[1]; // правая координата
+                str = Console.ReadLine().Split(' ');
+                segmentsX_L_R[i,0] = Convert.ToInt32(str[0]); // левая координата
+                segmentsX_L_R[i,1] = Convert.ToInt32(str[1]); // правая координата
             }
             return segmentsX_L_R;
-        }      
+        }
 
         // считать все точки -> 1мерный массив координат точек
         // проверить кажду точку на принадлежность отрезкам
         static void CountPoints( int[,] sortSegmentsRead )
         {
+
             int j = 0, result = 0;
             int[] input = new int[countsSegmentsAndPoints[1]];
             int[] output = new int[countsSegmentsAndPoints[1]];
             input = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
-
-            for (int i = 0; i < countsSegmentsAndPoints[1]; i++)
-            {
-                while(input[i] >= sortSegmentsRead[j, 0])
+            StringBuilder res = new StringBuilder();
+            // поиск подъодящих отрезков методом бинарного поиска
+                
+                for (int i = 0; i < countsSegmentsAndPoints[1]; i++)
                 {
-                    if (input[i] <= sortSegmentsRead[j, 1])
+                    while(input[i] >= sortSegmentsRead[j, 0])
                     {
-                        result++;
+                        if (input[i] <= sortSegmentsRead[j, 1])
+                        {
+                            result++;
+                        }
+                        j++;
+                        if (j == countsSegmentsAndPoints[0])
+                        {
+                            break;
+                        }
                     }
-                    j++;
-                    if (j == countsSegmentsAndPoints[0])
-                    {
-                        break;
-                    }
+                    res.Append(result);
+                    res.Append(" "); 
+                    j = 0; result = 0;
                 }
-                Console.Write(result + " ");
-                j = 0; result = 0;
+            Console.Write(res);
+            }
+
+        // метод для бинарного поиска
+        public static int binarySearch(int[,] x, int searchValue, int left, int right)
+        {
+            if (right < left)
+            {
+                return -1;
+            }
+            int mid = (left + right) >> 1;
+            if (searchValue > x[mid,0])
+            {
+                return binarySearch(x, searchValue, mid + 1, right);
+            }
+            else if (searchValue < x[mid,0])
+            {
+                return binarySearch(x, searchValue, left, mid - 1);
+            }
+            else
+            {
+                return mid;
             }
         }
-    
+
         // подсчет и вывод отрезков, в которые входит данная точка
         static void CountSegmentsForSelectedPoint( int[] pointsRead , int[,] sortSegmentsRead )
         {
@@ -96,10 +125,9 @@ namespace Points
                         break;
                     }
                 }
-                Console.Write(result + " ");
                 j = 0; result = 0;
-
             }
+            Console.Write(result + " ");
         }
 
         // быстрая сортировка
@@ -155,7 +183,11 @@ namespace Points
         {
             // СЧИТЫВАНИЕ С КОНСОЛИ
             // считываем с консоли два числа n - кол-во отрезков и m - кол-во точек на прямой и изменяем поле countsSegmentsAndPoints
-            countsSegmentsAndPoints = Array.ConvertAll(Console.ReadLine().Split(' ') , int.Parse);
+            //countsSegmentsAndPoints = Array.ConvertAll(Console.ReadLine().Split(' ') , int.Parse);
+            string[] str = Console.ReadLine().Split(' ');
+            countsSegmentsAndPoints[0] = Convert.ToInt32(str[0]);
+            countsSegmentsAndPoints[1] = Convert.ToInt32(str[1]);
+
             // считываем массив из 2мерного массива координат отрезков
             int[,] segmentsReadX_L_R = CountSegments();
             //сортируем массив координат отрезков по левой координате
@@ -178,7 +210,7 @@ namespace Points
             //int[] pointsReadAfterSort = QuickSort(pointsRead, 0 , countsSegmentsAndPoints[1]-1);
             //Console.WriteLine(pointsReadAfterSort[0] + " " + pointsReadAfterSort[1] + " " + pointsReadAfterSort[2] + " last: " + pointsReadAfterSort[countsSegmentsAndPoints[1] - 1]);
             
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }

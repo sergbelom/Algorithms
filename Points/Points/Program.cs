@@ -56,53 +56,72 @@ namespace Points
         static void CountPoints( int[,] sortSegmentsRead )
         {
 
-            int j = 0, result = 0;
+            int j = 0, result;
             int[] input = new int[countsSegmentsAndPoints[1]];
             int[] output = new int[countsSegmentsAndPoints[1]];
             input = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
             StringBuilder res = new StringBuilder();
-            // поиск подъодящих отрезков методом бинарного поиска
-                
-                for (int i = 0; i < countsSegmentsAndPoints[1]; i++)
-                {
-                    while(input[i] >= sortSegmentsRead[j, 0])
-                    {
-                        if (input[i] <= sortSegmentsRead[j, 1])
-                        {
-                            result++;
-                        }
-                        j++;
-                        if (j == countsSegmentsAndPoints[0])
-                        {
-                            break;
-                        }
-                    }
-                    res.Append(result);
-                    res.Append(" "); 
-                    j = 0; result = 0;
-                }
-            Console.Write(res);
+
+            for (int i = 0; i < countsSegmentsAndPoints[1]; i++)
+            {
+                result = 0;
+                binarySearch(sortSegmentsRead, input[i], 0, countsSegmentsAndPoints[0]-1 , ref result );
+                res.Append(result);
+                res.Append(" ");
             }
 
+            // поиск подъодящих отрезков методом бинарного поиска
+            /*
+            for (int i = 0; i < countsSegmentsAndPoints[1]; i++)
+            {
+                while(input[i] >= sortSegmentsRead[j, 0])
+                {
+                    if (input[i] <= sortSegmentsRead[j, 1])
+                    {
+                        result++;
+                    }
+                    j++;
+                    if (j == countsSegmentsAndPoints[0])
+                    {
+                        break;
+                    }
+                }
+                res.Append(result);
+                res.Append(" "); 
+                j = 0; result = 0;
+            }
+            */
+
+            Console.Write(res);
+            }
+        // TODO: придумать нормальные рекурсивные вызовы
         // метод для бинарного поиска
-        public static int binarySearch(int[,] x, int searchValue, int left, int right)
+        public static int binarySearch(int[,] x, int searchValue, int left, int right , ref int result)
         {
             if (right < left)
             {
-                return -1;
+                return result;
             }
-            int mid = (left + right) >> 1;
-            if (searchValue > x[mid,0])
+            int mid = (left + right)/2;
+            if (searchValue >= x[mid,0])
             {
-                return binarySearch(x, searchValue, mid + 1, right);
+                if (searchValue <= x[mid, 1])
+                {
+                    result++;
+                    return binarySearch(x, searchValue, mid, right+1, ref result);
+                }
+                else
+                {
+                    return binarySearch(x, searchValue, left, right+1, ref result);
+                }
             }
             else if (searchValue < x[mid,0])
-            {
-                return binarySearch(x, searchValue, left, mid - 1);
+            {               
+                return binarySearch(x, searchValue, left-1, right, ref result);
             }
             else
             {
-                return mid;
+                return binarySearch(x, searchValue, left+1, right+1, ref result);
             }
         }
 
@@ -210,7 +229,7 @@ namespace Points
             //int[] pointsReadAfterSort = QuickSort(pointsRead, 0 , countsSegmentsAndPoints[1]-1);
             //Console.WriteLine(pointsReadAfterSort[0] + " " + pointsReadAfterSort[1] + " " + pointsReadAfterSort[2] + " last: " + pointsReadAfterSort[countsSegmentsAndPoints[1] - 1]);
             
-            //Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }

@@ -1,6 +1,6 @@
 # Algorithms
 Repository for this course [Algorithms](https://stepik.org/course/217/syllabus) and other.
-Each the algorithm is located in selected brach. In the master branch collected all correct programms.
+Each the algorithm is located in selected brach. [In the master branch collected all correct programms.]
 
 References to wikipedia about algorithms.
 

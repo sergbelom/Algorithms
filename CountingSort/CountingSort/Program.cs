@@ -8,10 +8,10 @@ using System.Collections.Generic;
 Первая строка содержит число 1≤n≤10^4, вторая — n натуральных чисел, не превышающих 10.
 Выведите упорядоченную по неубыванию последовательность этих чисел.
 Sample Input:
-15
-2 0 3 9 5 0 1 9 2 9 1 0 8 7 5
+6
+2 10 3 9 2 9
 Sample Output:
-2 2 3 9 9
+2 2 3 9 9 10
 */
 
 namespace CountingSort
@@ -29,10 +29,10 @@ namespace CountingSort
             return inputArr;
         }
 
-        // метод для сортировки подсчетом
+        // метод для сортировки подсчетом 
         static int[] CountingSort( int[] inputArr ) {
 
-            int[] interArr = new int[10];
+            int[] interArr = new int[11];
             int[] outputArr = new int[inputArr.Length];
 
             for (int j = 0; j < inputArr.Length; j++)
@@ -48,37 +48,23 @@ namespace CountingSort
             int k;
             for (int j = 0 ; j < inputArr.Length ; j++ )
             {
-
                 k = interArr[inputArr[j]];
-
                 outputArr[k-1] = inputArr[j];
-                interArr[inputArr[j]] = interArr[inputArr[j]] - 1;
-               
-
+                interArr[inputArr[j]] = interArr[inputArr[j]] - 1;             
             }
-
-            foreach (int x in outputArr)
-                Console.Write(x + " ");
 
             return outputArr;
         }
 
         static void Main(string[] args)
         {
-            CountingSort(ReadArray());
-
-            //int[] input = ReadArray();
-
-           
-            /*
-            foreach (int elem in CountingSort(ReadArray()))
+            foreach (int x in CountingSort(ReadArray()))
             {
-                Console.Write(elem);
+                Console.Write(x);
                 Console.Write(' ');
             }
-            */
 
-          Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }

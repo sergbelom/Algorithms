@@ -5,16 +5,8 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 
 /*
-Первая строка содержит число 1≤n≤10^4, вторая — n натуральных чисел, не превышающих 10.
+Первая строка содержит число, вторая — n натуральных чисел, не превышающих 10.
 Выводит упорядоченную по неубыванию последовательность этих чисел.
-
-Пример
-вход:
-6
-2 10 3 9 2 9
-выход:
-2 2 3 9 9 10
-*/
 
 namespace CountingSort
 {
@@ -52,7 +44,7 @@ namespace CountingSort
             {
                 k = interArr[inputArr[j]];
                 outputArr[k-1] = inputArr[j];
-                interArr[inputArr[j]] = interArr[inputArr[j]] - 1;             
+                interArr[inputArr[j]] = interArr[inputArr[j]] - 1;
             }
 
             return outputArr;

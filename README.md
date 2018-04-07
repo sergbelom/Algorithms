@@ -17,6 +17,7 @@ Clustering
 |-| [K-means clustering](https://en.wikipedia.org/wiki/K-means_clustering)
 
 Number algorithms:
+
 |+| [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
 
 |+| [Huffman Coding and Huffman Decoding](https://en.wikipedia.org/wiki/Huffman_coding)

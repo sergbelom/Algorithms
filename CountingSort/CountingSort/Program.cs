@@ -4,10 +4,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-/*
-Первая строка содержит число, вторая — n натуральных чисел, не превышающих 10.
-Выводит упорядоченную по неубыванию последовательность этих чисел.
-
 namespace CountingSort
 {
     class Program

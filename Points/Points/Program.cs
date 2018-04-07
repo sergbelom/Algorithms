@@ -3,32 +3,6 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 
-/* РЕЗУЛЬТАТ:
-Для каждой точки в порядке появления во вводе выведите,
-скольким отрезкам она принадлежит
-test1:
-input
-2 3
-0 5
-7 10
-1 6 11
-output
-1 0 0
-
-test2:
-6 5
-0 5
-7 10
-0 8
-10 12
-1 2
-2 8
-11 6 1 2 8
-output
-1 2 3 4 3
-
-*/
-
 namespace Points
 {
     class Program

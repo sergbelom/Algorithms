@@ -16,7 +16,7 @@ Clustering
 
 |-| [K-means clustering](https://en.wikipedia.org/wiki/K-means_clustering)
 
-Number algorithms:
+Number algorithms (Search, Queue, Coding and other):
 
 |+| [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
 

@@ -36,4 +36,7 @@ Sorting
 
 |+| [Counting Sort](https://en.wikipedia.org/wiki/Counting_sort)
 
+Random Generator
+
+|-| [Mersenne Twister](https://en.wikipedia.org/wiki/Mersenne_Twister)
 

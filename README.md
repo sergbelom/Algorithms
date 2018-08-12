@@ -5,7 +5,9 @@ Each the algorithm is located in selected brach.
 References to wikipedia about algorithms.
 
 Graph Algorithm:
+
 |-| [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
+
 |-| [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
 
 Travelling salesman problem:

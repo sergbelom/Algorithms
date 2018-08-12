@@ -4,6 +4,10 @@ Each the algorithm is located in selected brach.
 
 References to wikipedia about algorithms.
 
+Graph Algorithm:
+|-| [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
+|-| [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
+
 Travelling salesman problem:
 
 |+| [Ant Algorithm](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms) for [Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)

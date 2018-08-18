@@ -4,31 +4,39 @@ Each the algorithm is located in selected brach.
 
 References to wikipedia about algorithms.
 
-Algorithms of discrete mathematics:
+**Algorithms of discrete mathematics.**
 
 |-| [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
 
 |-| [Euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm)
 
-Graph algorithm:
+**Algorithms on graphs.**
 
 |-| [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
 |-| [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
 
-Travelling salesman problem:
+**Sorting.**
+
+|+| [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) and [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
+
+|-| [Quick Sort](https://en.wikipedia.org/wiki/Quicksort)
+
+|+| [Counting Sort](https://en.wikipedia.org/wiki/Counting_sort)
+
+**Travelling salesman problem.**
 
 |+| [Ant Algorithm](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms) for [Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
 
-Algorithm for TicTacToe
+**Algorithm for TicTacToe.**
 
 |-| Ant Algorithm for TicTacToe
 
-Clustering
+**Clustering.**
 
 |-| [K-means clustering](https://en.wikipedia.org/wiki/K-means_clustering)
 
-Number algorithms (Search, Queue, Coding and other):
+**Numerical algorithms (Search, Queue, Coding and other).**
 
 |+| [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
 
@@ -40,15 +48,6 @@ Number algorithms (Search, Queue, Coding and other):
 
 |-| [Karatsuba Algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
 
-Sorting
-
-|+| [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) and [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
-
-|-| [Quick Sort](https://en.wikipedia.org/wiki/Quicksort)
-
-|+| [Counting Sort](https://en.wikipedia.org/wiki/Counting_sort)
-
-Random Generator
+**Random Generator**
 
 |-| [Mersenne Twister](https://en.wikipedia.org/wiki/Mersenne_Twister)
-

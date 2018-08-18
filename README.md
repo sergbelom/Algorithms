@@ -24,7 +24,7 @@ References to wikipedia about algorithms.
 
 |+| [Counting Sort](https://en.wikipedia.org/wiki/Counting_sort)
 
-**Numerical algorithms (Search, Queue, Coding and other).**
+**Numerical algorithms.**
 
 |+| [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
 

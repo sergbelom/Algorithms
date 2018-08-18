@@ -4,7 +4,13 @@ Each the algorithm is located in selected brach.
 
 References to wikipedia about algorithms.
 
-Graph Algorithm:
+Algorithms of discrete mathematics:
+
+|-| [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
+
+|-| [Euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm)
+
+Graph algorithm:
 
 |-| [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 

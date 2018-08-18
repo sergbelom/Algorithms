@@ -24,18 +24,6 @@ References to wikipedia about algorithms.
 
 |+| [Counting Sort](https://en.wikipedia.org/wiki/Counting_sort)
 
-**Travelling salesman problem.**
-
-|+| [Ant Algorithm](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms) for [Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
-
-**Algorithm for TicTacToe.**
-
-|-| Ant Algorithm for TicTacToe
-
-**Clustering.**
-
-|-| [K-means clustering](https://en.wikipedia.org/wiki/K-means_clustering)
-
 **Numerical algorithms (Search, Queue, Coding and other).**
 
 |+| [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
@@ -48,6 +36,18 @@ References to wikipedia about algorithms.
 
 |-| [Karatsuba Algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
 
+**Clustering.**
+
+|-| [K-means clustering](https://en.wikipedia.org/wiki/K-means_clustering)
+
 **Random Generator**
 
 |-| [Mersenne Twister](https://en.wikipedia.org/wiki/Mersenne_Twister)
+
+**Travelling salesman problem.**
+
+|+| [Ant Algorithm](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms) for [Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+
+**Algorithm for TicTacToe.**
+
+|-| Ant Algorithm for TicTacToe

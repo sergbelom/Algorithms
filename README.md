@@ -6,18 +6,6 @@ References to wikipedia about algorithms and my implementation.
 
 *The repository will be updated continuously.*
 
-**Algorithms of discrete mathematics.**
-
-|-| Sieve of Eratosthenes [Theory](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) [Implementation]
-
-|-| Euclidean algorithm [Theory](https://en.wikipedia.org/wiki/Euclidean_algorithm) [Implementation]
-
-**Algorithms on graphs.**
-
-|-| Breadth-first search [Theory](https://en.wikipedia.org/wiki/Breadth-first_search) [Implementation]
-
-|-| Depth-first search [Theory](https://en.wikipedia.org/wiki/Depth-first_search) [Implementation]
-
 **Sorting.**
 
 |-| Heap [Theory](https://en.wikipedia.org/wiki/Heapsort) [Implementation]
@@ -42,6 +30,18 @@ References to wikipedia about algorithms and my implementation.
 
 |-| Karatsuba Algorithm [Theory](https://en.wikipedia.org/wiki/Karatsuba_algorithm) [Implementation]
 
+**Algorithms of discrete mathematics.**
+
+|-| Sieve of Eratosthenes [Theory](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) [Implementation]
+
+|-| Euclidean algorithm [Theory](https://en.wikipedia.org/wiki/Euclidean_algorithm) [Implementation]
+
+**Algorithms on graphs.**
+
+|-| Breadth-first search [Theory](https://en.wikipedia.org/wiki/Breadth-first_search) [Implementation]
+
+|-| Depth-first search [Theory](https://en.wikipedia.org/wiki/Depth-first_search) [Implementation]
+
 **Clustering.**
 
 |-| K-means clustering [Theory](https://en.wikipedia.org/wiki/K-means_clustering) [Implementation]
@@ -57,3 +57,7 @@ References to wikipedia about algorithms and my implementation.
 **Algorithm for TicTacToe.**
 
 |-| Ant Algorithm for TicTacToe
+
+**Algorithm Hash Functions**
+
+|+| Polynomial hash function or rolling hash [Theory](https://en.wikipedia.org/wiki/Rolling_hash) [Implementation]

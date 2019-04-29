@@ -72,6 +72,10 @@ References to wikipedia about algorithms and my implementation on С++ or C#.
 
 |-| Mersenne Twister. [Theory](https://en.wikipedia.org/wiki/Mersenne_Twister) [Implementation]
 
+**Computational geometry**
+
+|-| Voronoi diagram. [Theory](https://en.wikipedia.org/wiki/Voronoi_diagram) [Implementation]
+
 **Travelling salesman problem.**
 
 |+| Ant Algorithm for Travelling salesman problem. [Theory](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms) [Implementation](https://github.com/sergbelom/Algorithms/tree/AntAlgorithm/AntAlgorithmForSalesmenTask/AntAlgorithmForSalesmenTask)

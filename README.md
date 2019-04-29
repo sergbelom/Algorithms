@@ -46,7 +46,8 @@ References to wikipedia about algorithms.
 
 **Travelling salesman problem.**
 
-|+| [Ant Algorithm](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms) for [Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+|+| Ant Algorithm. [Info](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms) for [Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+[Implementation](https://github.com/sergbelom/Algorithms/tree/AntAlgorithm/AntAlgorithmForSalesmenTask/AntAlgorithmForSalesmenTask)
 
 **Algorithm for TicTacToe.**
 

@@ -82,4 +82,7 @@ References to wikipedia about algorithms and my implementation on С++ or C#.
 
 **Algorithm Hash Functions**
 
-|+| Polynomial hash function or rolling hash. [Theory](https://en.wikipedia.org/wiki/Rolling_hash) [Implementation]
+|+| Polynomial hash function or rolling hash. [Theory](https://en.wikipedia.org/wiki/Rolling_hash) [Implementation](https://github.com/sergbelom/Codereview/blob/master/AlgorithmRabinaKarpa.cpp)
+
+**Parallel computation**
+|+| Map Reduce [Theory](https://en.wikipedia.org/wiki/MapReduce) [Implementation](https://github.com/sergbelom/Codereview/blob/master/MapReduce.cpp)

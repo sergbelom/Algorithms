@@ -32,7 +32,10 @@ References to wikipedia about algorithms.
 
 |-| [Priority Queue](https://en.wikipedia.org/wiki/Priority_queue)
 
-|+| [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+|-| Binary Search
+
+[Theory](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+[Implementation]()
 
 |-| [Karatsuba Algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
 
@@ -46,9 +49,9 @@ References to wikipedia about algorithms.
 
 **Travelling salesman problem.**
 
-|+| Ant Algorithm.
+|+| Ant Algorithm for Travelling salesman problem.
 
-[Theory](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms) for [Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+[Theory](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms)
 
 [Implementation](https://github.com/sergbelom/Algorithms/tree/AntAlgorithm/AntAlgorithmForSalesmenTask/AntAlgorithmForSalesmenTask)
 

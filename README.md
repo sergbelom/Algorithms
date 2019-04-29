@@ -86,3 +86,6 @@ References to wikipedia about algorithms and my implementation on С++ or C#.
 
 **Parallel computation**
 |+| Map Reduce [Theory](https://en.wikipedia.org/wiki/MapReduce) [Implementation](https://github.com/sergbelom/Codereview/blob/master/MapReduce.cpp)
+
+**Signal and image processing**
+|-| Fast Fourier transform [Theory](https://en.wikipedia.org/wiki/Fast_Fourier_transform) [Implementation]

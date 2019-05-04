@@ -1,8 +1,9 @@
 # Algorithms
 
 Repository for well-known algorithms.
-Each the algorithm is located in selected brach.
-References to wikipedia about algorithms and my implementation on С++ or C#.
+Each the algorithm is located in selected brach or in other repository.
+С++ or C# implementation for each algorithm is located by link in discription.
+References to wikipedia about algorithms are available.
 
 *The repository will be updated continuously.*
 
@@ -17,6 +18,19 @@ References to wikipedia about algorithms and my implementation on С++ or C#.
 |-| Insertion Sort. [Theory](https://en.wikipedia.org/wiki/Insertion_sort) [Implementation]
 
 |+| Counting Sort. [Theory](https://en.wikipedia.org/wiki/Counting_sort) [Implementation](https://github.com/sergbelom/Algorithms/tree/CountingSort/CountingSort/CountingSort)
+
+
+
+**Data structure**
+
+|+| Priority queue (based on the heap). [Theory](https://en.wikipedia.org/wiki/Priority_queue) [Implementation]()
+
+**Dynamic programming**
+|+| Largest consecutive subsequence [Theory](https://neerc.ifmo.ru/wiki/index.php?title=Задача_о_наибольшей_возрастающей_подпоследовательности) [Implementation]()
+
+|+| Edit distance [Theory](https://neerc.ifmo.ru/wiki/index.php?title=Задача_о_редакционном_расстоянии,_алгоритм_Вагнера-Фишера) [Implementation]()
+
+|+| Knapsack [Theory](https://en.wikipedia.org/wiki/Knapsack_problem) [Implementation]()
 
 **Search in text**
 

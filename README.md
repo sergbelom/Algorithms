@@ -24,6 +24,7 @@ References to wikipedia about algorithms are available.
 |+| Priority queue (based on the heap). [Theory](https://en.wikipedia.org/wiki/Priority_queue) [C# Implementation](https://github.com/sergbelom/Algorithms/tree/PriorityQueue/PriorityQueue/PriorityQueue)
 
 **Dynamic programming**
+
 |+| Largest consecutive subsequence [Theory](https://neerc.ifmo.ru/wiki/index.php?title=Задача_о_наибольшей_возрастающей_подпоследовательности) [C# Implementation](https://github.com/sergbelom/Algorithms/tree/LargestConsecutiveSubsequence)
 
 |+| Edit distance [Theory](https://neerc.ifmo.ru/wiki/index.php?title=Задача_о_редакционном_расстоянии,_алгоритм_Вагнера-Фишера) [C# Implementation](https://github.com/sergbelom/Algorithms/tree/EditDistance)
